@@ -1,0 +1,98 @@
+package com.example.android.counterapp;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    int goalsTeamA=0;
+    int goalsTeamB=0;
+    int shotsTeamA=0;
+    int shotsTeamB=0;
+    int penaltiesTeamA=0;
+    int penaltiesTeamB=0;
+
+    public  void addGoalA(View v){
+        goalsTeamA++;
+        displayGoalsA(goalsTeamA);
+    }
+    public void addShotA(View v){
+        shotsTeamA++;
+        displayShotsA(shotsTeamA);
+
+    }
+    public void addPenaldieA(View v){
+        penaltiesTeamA++;
+        displayPenaldiesA(penaltiesTeamA);
+    }
+    //--------------------------------------
+    public  void addGoalB(View v){
+        goalsTeamB++;
+        displayGoalsB(goalsTeamB);
+    }
+    public void addShotB(View v){
+        shotsTeamB++;
+        displayShotsB(shotsTeamB);
+
+    }
+    public void addPenaldieB(View v){
+        penaltiesTeamB++;
+        displayPenaldiesB(penaltiesTeamB);
+    }
+    public void reset(View v){
+        goalsTeamA=0;
+        goalsTeamB=0;
+        shotsTeamA=0;
+        shotsTeamB=0;
+        penaltiesTeamA=0;
+        penaltiesTeamB=0;
+        displayGoalsA(goalsTeamA);
+        displayShotsA(shotsTeamA);
+        displayPenaldiesA(penaltiesTeamA);
+        displayGoalsB(goalsTeamB);
+        displayShotsB(shotsTeamB);
+        displayPenaldiesB(penaltiesTeamB);
+
+    }
+    //-----------------------------------
+    public void displayGoalsA(int goalsTeamA){
+        TextView goalA = (TextView) findViewById(R.id.text);
+        goalA.setText(String.valueOf(goalsTeamA));
+    }
+    public void  displayShotsA (int shotsTeamA){
+        TextView shotA = (TextView) findViewById(R.id.text2);
+        shotA.setText(String.valueOf(shotsTeamA));
+    }
+    public void displayPenaldiesA (int penaltiesTeamA){
+        TextView penaltieA = (TextView) findViewById(R.id.text3);
+        penaltieA.setText(String.valueOf(penaltiesTeamA));
+    }
+    //-----------------------------------
+    public void displayGoalsB(int goalsTeamB){
+        TextView goalB = (TextView) findViewById(R.id.text4);
+        goalB.setText(String.valueOf(goalsTeamB));
+    }
+    public void  displayShotsB (int shotsTeamB){
+        TextView shotB = (TextView) findViewById(R.id.text5);
+        shotB.setText(String.valueOf(shotsTeamB));
+    }
+    public void displayPenaldiesB (int penaltiesTeamB){
+        TextView penaltieB = (TextView) findViewById(R.id.text6);
+        penaltieB.setText(String.valueOf(penaltiesTeamB));
+    }
+
+
+
+
+
+
+
+}
